@@ -55,4 +55,10 @@
 
         }
     }
+    const clearField =() => {
+        const parent = document.getElementById("todo-list")
+            while (parent.lastChild) {
+                parent.removeChild(parent.lastChild);
+            }
+    }
     
