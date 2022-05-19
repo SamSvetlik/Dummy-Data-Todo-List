@@ -36,6 +36,23 @@
         }
     }
     const populateID = () => {
-        
+        const removeChilds = () => {
+            const parent = document.getElementById("todo-list")
+            while (parent.lastChild) {
+                parent.removeChild(parent.lastChild);
+            }
+        };
+        removeChilds()
+        const grabInput = document.getElementById("userID").value
+        const result = arrayOfTodos.filter((item) => item.userId == grabInput)
+        for (let i = 0; i < result.length; i++) {
+            console.log(i+1, result[i].title)
+            const newLi = document.createElement("li")
+            const content = document.createTextNode(result[i].title)
+            newLi.appendChild(content)
+            const findOL = document.getElementById("todo-list")
+            findOL.appendChild(newLi)
+
+        }
     }
     
