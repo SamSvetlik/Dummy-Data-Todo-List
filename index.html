@@ -11,6 +11,11 @@
     <button onclick="fetchTodos()">Fetch Todos</button>
     <button onclick="logTodos()">Log Todos</button>
     <button onclick="populateTodos()">Populate Todos</button>
+    <form>
+        <label for="userID">userID</label>
+        <input for="userID" id="userID" type="number" min="1" max="10"> 
+        <button onclick="populateID()">Populate UserIDs</button>
+    </form>
     <ol id="todo-list">
     <!-- LIs will go here -->
     </ol>
